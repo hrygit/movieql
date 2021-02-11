@@ -8,8 +8,14 @@ type Movie {
   genres: [String]
 }
 
+type Atable {
+  col1: Int
+  col2: String
+}
+
 type Query {
   movies(limit: Int, rating: Float): [Movie]!
   movie(id: Int!): Movie
   suggestions(id: Int!): [Movie]!
+  atable_all(): [Atable]
 }
